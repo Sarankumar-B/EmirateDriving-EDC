@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.listeners.ListernerClass"></listener>
+		<listener class-name="com.listeners.AnnotationsTransformer"></listener>
+	</listeners>
+
+	<test name="Test run">
+		<parameter name="browsername" value="chrome"></parameter>
+		<classes>
+			<class name="com.testcases.LogInTestCases" />
+<!--			<class name="com.testcases.ForgotPasswordTestCases" />-->
+<!--			<class name="com.testcases.ProfilePageTestCases" />-->
+<!--			<class name="com.testcases.VoucherCreationAndCancelTestCases" />-->
+<!--			<class name="com.testcases.RedeemingAndDecliningTestCases" />-->
+<!--			<class name="com.testcases.ReactivateRequestFlowTestCases" />-->
+<!--			<class name="com.testcases.RefundRequestFlowTestCases" />-->
+<!--			<class name="com.testcases.VoucherListTestCases" />-->
+<!--		    <class name="com.testcases.DemoClass" />-->
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<suite name="wrappers">
+	<test name="Test case Execution">
+		<classes>
+			<class name="wrappers.TC001" />
+			<class name="wrappers.TC002" />
+			<class name="wrappers.TC003" />
+<!--			<class name="wrappers.TC004" />-->
+<!--			<class name="wrappers.TC005" />-->
+<!--			<class name="wrappers.TC006" />-->
+<!--			<class name="wrappers.TC007" />-->
+<!--			<class name="wrappers.TC008" />-->
+<!--			<class name="wrappers.TC009" />-->
+<!--			<class name="wrappers.TC010" />-->
+<!--			<class name="wrappers.TC011" />-->
+<!--			<class name="wrappers.TC012" />-->
+<!--			<class name="wrappers.TC013" />-->
+<!--			<class name="wrappers.TC014" />-->
+<!--			<class name="wrappers.TC015" />-->
+<!--			<class name="wrappers.TC016" />-->
+<!--			<class name="wrappers.TC017" />-->
+<!--			<class name="wrappers.TC018" />-->
+<!--			<class name="wrappers.TC019" />-->
+<!--			<class name="wrappers.TC020" />-->
+		</classes>
+	</test>
+</suite>
