@@ -27,8 +27,7 @@ public class ExtentReport {
 			spark.config().setTheme(Theme.DARK);
 			spark.config().setDocumentTitle("EDC-Automation Test Report");
 			spark.config().setReportName("Emirates Driving Company");
-			spark.config().setCss(".badge-primary{background-color:#08111c;}");
-			
+			spark.config().setCss(".badge-primary {color: #000;background-color: #ffffff;}");
 			spark.loadXMLConfig(new File("src/test/resources/config.xml"));
 			extent.setSystemInfo("OS Details", System.getProperty("os.name"));
 			extent.setSystemInfo("Java Version", System.getProperty("java.version"));

@@ -8,24 +8,54 @@
   <test thread-count="5" name="Test run(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
+      <class name="com.testcases.VoucherCreationAndCancelTestCases">
+        <methods>
+          <include name="voucherCreationAsCSSTC13"/>
+          <include name="cancellingVoucherTC15"/>
+          <include name="voucherCreationAsGuestTC14"/>
+          <include name="invokeApp"/>
+        </methods>
+      </class> <!-- com.testcases.VoucherCreationAndCancelTestCases -->
       <class name="com.testcases.RedeemingAndDecliningTestCases">
         <methods>
           <include name="decliningVoucherTC17"/>
+          <include name="redeemingVoucherTC16"/>
           <include name="invokeApp"/>
         </methods>
       </class> <!-- com.testcases.RedeemingAndDecliningTestCases -->
+      <class name="com.testcases.ForgotPasswordTestCases">
+        <methods>
+          <include name="verifyingResetPasswordflowTC08"/>
+          <include name="invokeApp"/>
+        </methods>
+      </class> <!-- com.testcases.ForgotPasswordTestCases -->
+      <class name="com.testcases.VoucherListTestCases">
+        <methods>
+          <include name="downloadVoucherVerificationTC24"/>
+          <include name="allPageNavigationAndVerifyingEntriesTC22"/>
+          <include name="invokeApp"/>
+        </methods>
+      </class> <!-- com.testcases.VoucherListTestCases -->
       <class name="com.testcases.ReactivateRequestFlowTestCases">
         <methods>
+          <include name="verifyingReactivateRejectFlowTC19"/>
           <include name="verifyingReactivateApprovalFlowTC18"/>
           <include name="invokeApp"/>
         </methods>
       </class> <!-- com.testcases.ReactivateRequestFlowTestCases -->
       <class name="com.testcases.RefundRequestFlowTestCases">
         <methods>
+          <include name="refundRejectTC21"/>
           <include name="refundApproveTC20"/>
           <include name="invokeApp"/>
         </methods>
       </class> <!-- com.testcases.RefundRequestFlowTestCases -->
+      <class name="com.testcases.ProfilePageTestCases">
+        <methods>
+          <include name="verifyingProfilePictureUploadTC11"/>
+          <include name="invokeApp"/>
+        </methods>
+      </class> <!-- com.testcases.ProfilePageTestCases -->
     </classes>
   </test> <!-- Test run(failed) -->
 </suite> <!-- Failed suite [Suite] -->

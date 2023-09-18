@@ -23,7 +23,7 @@
         <!-- report name - displayed at top-nav -->
         <reportName>
 			<![CDATA[
-                <img src='src/test/resources/Logos/new_logo (4).jpg'/>
+                <img src='src/test/resources/Logos/new_logo (6).jpg'/>
             ]]>
 			
 	</reportName>

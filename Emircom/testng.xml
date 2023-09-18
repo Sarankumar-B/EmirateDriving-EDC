@@ -18,7 +18,7 @@
 			<class name="com.testcases.ReactivateRequestFlowTestCases" />
 			<class name="com.testcases.RefundRequestFlowTestCases" />
 			<class name="com.testcases.VoucherListTestCases" />
-<!--		    <class name="com.testcases.DemoClass" />-->
+<!--			<class name="com.testcases.DemoClass" />-->
 		</classes>
 	</test>
 </suite>

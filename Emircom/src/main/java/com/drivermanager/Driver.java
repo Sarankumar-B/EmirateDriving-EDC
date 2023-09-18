@@ -1,5 +1,6 @@
 package com.drivermanager;
 
+import java.awt.Dimension;
 import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;
@@ -41,11 +42,11 @@ public class Driver {
 		
 		if (browsername.equalsIgnoreCase("Chrome")) {
 			//Create instance of ChromeOptions Class
-			ChromeOptions handlingSSL = new ChromeOptions();
+			ChromeOptions options = new ChromeOptions();
 			//Using the accept insecure cert method with true as parameter to accept the untrusted certificate
-			handlingSSL.setAcceptInsecureCerts(true);
-			//Creating instance of Chrome driver by passing reference of ChromeOptions object
-			driver = new ChromeDriver(handlingSSL);
+			options.setAcceptInsecureCerts(true);
+			//Creating instance of Chrome driver by passing reference of ChromeOptions object)
+			driver = new ChromeDriver(options);
 			Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
 			browserName = caps.getBrowserName();
 			browserVersion = caps.getBrowserVersion();
@@ -62,9 +63,8 @@ public class Driver {
 			browserName = caps.getBrowserName();
 			browserVersion = caps.getBrowserVersion();
 		}
-		
 		BaseClass.pageFactoryInitiation();
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();		
 		driver.get(props.getProperty("URL"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
 	}
