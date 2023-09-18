@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\ranjithkumar.sivakum\eclipse-workspace\Emircom\testng.xml</span>
+                    <span>C:\Users\ranjithkumar.sivakum\git\EmirateDriving-EDC\Emircom\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,145 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">24 methods, 3 failed,   21 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.RedeemingAndDecliningTestCases" class="method navigator-link" hash-for-method="decliningVoucherTC17">decliningVoucherTC17</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.RefundRequestFlowTestCases" class="method navigator-link" hash-for-method="refundApproveTC20">refundApproveTC20</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ReactivateRequestFlowTestCases" class="method navigator-link" hash-for-method="verifyingReactivateApprovalFlowTC18">verifyingReactivateApprovalFlowTC18</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherListTestCases" class="method navigator-link" hash-for-method="allPageNavigationAndVerifyingEntriesTC22">allPageNavigationAndVerifyingEntriesTC22</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherCreationAndCancelTestCases" class="method navigator-link" hash-for-method="cancellingVoucherTC15">cancellingVoucherTC15</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherListTestCases" class="method navigator-link" hash-for-method="downloadVoucherVerificationTC24">downloadVoucherVerificationTC24</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.testcases.LogInTestCases" class="method navigator-link" hash-for-method="pageLandingOnHomepageAndUrlVerificationTC01">pageLandingOnHomepageAndUrlVerificationTC01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.RedeemingAndDecliningTestCases" class="method navigator-link" hash-for-method="redeemingVoucherTC16">redeemingVoucherTC16</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.RefundRequestFlowTestCases" class="method navigator-link" hash-for-method="refundRejectTC21">refundRejectTC21</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ForgotPasswordTestCases" class="method navigator-link" hash-for-method="verifyingErrorMsgOfResetPasswordPageTC07">verifyingErrorMsgOfResetPasswordPageTC07</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ForgotPasswordTestCases" class="method navigator-link" hash-for-method="verifyingForgetPwdPageNavigationTC06">verifyingForgetPwdPageNavigationTC06</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.LogInTestCases" class="method navigator-link" hash-for-method="verifyingInvalidCredentialerrormsgTC05(newwcsss, Qatest@12323)">verifyingInvalidCredentialerrormsgTC05(newwcsss, Qatest@12323)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.LogInTestCases" class="method navigator-link" hash-for-method="verifyingLogInPageElementsTC02">verifyingLogInPageElementsTC02</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.LogInTestCases" class="method navigator-link" hash-for-method="verifyingLoginPageErrorMsgTC03">verifyingLoginPageErrorMsgTC03</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.LogInTestCases" class="method navigator-link" hash-for-method="verifyingLoginwithvalidcredentialsTC04">verifyingLoginwithvalidcredentialsTC04</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ProfilePageTestCases" class="method navigator-link" hash-for-method="verifyingLogoutFlowTC12">verifyingLogoutFlowTC12</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ProfilePageTestCases" class="method navigator-link" hash-for-method="verifyingProfileDetailsTC09">verifyingProfileDetailsTC09</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ProfilePageTestCases" class="method navigator-link" hash-for-method="verifyingProfilePictureUploadTC11">verifyingProfilePictureUploadTC11</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ReactivateRequestFlowTestCases" class="method navigator-link" hash-for-method="verifyingReactivateRejectFlowTC19">verifyingReactivateRejectFlowTC19</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ForgotPasswordTestCases" class="method navigator-link" hash-for-method="verifyingResetPasswordflowTC08">verifyingResetPasswordflowTC08</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.ProfilePageTestCases" class="method navigator-link" hash-for-method="verifyinguserabletoeditprofiledetailsTC10">verifyinguserabletoeditprofiledetailsTC10</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherCreationAndCancelTestCases" class="method navigator-link" hash-for-method="voucherCreationAsCSSTC13">voucherCreationAsCSSTC13</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherCreationAndCancelTestCases" class="method navigator-link" hash-for-method="voucherCreationAsGuestTC14">voucherCreationAsGuestTC14</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherListTestCases" class="method navigator-link" hash-for-method="voucherSearchInVoucherlistTC23">voucherSearchInVoucherlistTC23</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +243,194 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">com.testcases.RedeemingAndDecliningTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="decliningVoucherTC17">
+                  </a> <!-- decliningVoucherTC17 -->
+                  <span class="method-name">decliningVoucherTC17</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (c61ede761d38124f4bf074d4236b83da)] -&gt; xpath: //span[text()=&apos;Total&apos;]//following-sibling::span[text()]] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.89, chrome: {chromedriverVersion: 117.0.5938.88 (be6afae47212..., userDataDir: C:\Users\RANJIT~1.SIV\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64862}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64862/devtoo..., se:cdpVersion: 117.0.5938.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c61ede761d38124f4bf074d4236b83da
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.testcases.BaseClass.waitForElementToBeAppear(BaseClass.java:333)
+	at com.pageobjectmodel.VoucherCreation.verifyingvoucheramount(VoucherCreation.java:302)
+	at com.testcases.RedeemingAndDecliningTestCases.decliningVoucherTC17(RedeemingAndDecliningTestCases.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.testcases.ReactivateRequestFlowTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingReactivateApprovalFlowTC18">
+                  </a> <!-- verifyingReactivateApprovalFlowTC18 -->
+                  <span class="method-name">verifyingReactivateApprovalFlowTC18</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (cf09294fa49d153e4cf5d86f4ed5d241)] -&gt; xpath: //button[text()=&apos;OK&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.testcases.BaseClass.waitForElementToBeClickable(BaseClass.java:313)
+	at com.testcases.BaseClass.clickElement(BaseClass.java:83)
+	at com.pageobjectmodel.ReactivateRefund.raisingReactivateRequest(ReactivateRefund.java:121)
+	at com.testcases.ReactivateRequestFlowTestCases.verifyingReactivateApprovalFlowTC18(ReactivateRequestFlowTestCases.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;OK&apos;]&quot;}
+  (Session info: chrome=117.0.5938.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cf09294fa49d153e4cf5d86f4ed5d241, findElement {using=xpath, value=//button[text()=&apos;OK&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.89, chrome: {chromedriverVersion: 117.0.5938.88 (be6afae47212..., userDataDir: C:\Users\RANJIT~1.SIV\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64903}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64903/devtoo..., se:cdpVersion: 117.0.5938.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cf09294fa49d153e4cf5d86f4ed5d241
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 32 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.testcases.RefundRequestFlowTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="refundApproveTC20">
+                  </a> <!-- refundApproveTC20 -->
+                  <span class="method-name">refundApproveTC20</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //div[text()=&apos;Cash&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at com.testcases.BaseClass.waitForElementToBeClickable(BaseClass.java:313)
+	at com.testcases.BaseClass.clickElement(BaseClass.java:83)
+	at com.pageobjectmodel.VoucherCreation.verifyingvoucheramount(VoucherCreation.java:290)
+	at com.testcases.RefundRequestFlowTestCases.refundApproveTC20(RefundRequestFlowTestCases.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;Cash&apos;]&quot;}
+  (Session info: chrome=117.0.5938.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a36b8b5c496189efbf0ce5890d436d14, findElement {using=xpath, value=//div[text()=&apos;Cash&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 117.0.5938.89, chrome: {chromedriverVersion: 117.0.5938.88 (be6afae47212..., userDataDir: C:\Users\RANJIT~1.SIV\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64985/devtoo..., se:cdpVersion: 117.0.5938.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a36b8b5c496189efbf0ce5890d436d14
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 32 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.RedeemingAndDecliningTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="redeemingVoucherTC16">
+                  </a> <!-- redeemingVoucherTC16 -->
+                  <span class="method-name">redeemingVoucherTC16</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.VoucherCreationAndCancelTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cancellingVoucherTC15">
+                  </a> <!-- cancellingVoucherTC15 -->
+                  <span class="method-name">cancellingVoucherTC15</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="voucherCreationAsCSSTC13">
+                  </a> <!-- voucherCreationAsCSSTC13 -->
+                  <span class="method-name">voucherCreationAsCSSTC13</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="voucherCreationAsGuestTC14">
+                  </a> <!-- voucherCreationAsGuestTC14 -->
+                  <span class="method-name">voucherCreationAsGuestTC14</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.testcases.LogInTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,53 +439,167 @@
                   <a name="pageLandingOnHomepageAndUrlVerificationTC01">
                   </a> <!-- pageLandingOnHomepageAndUrlVerificationTC01 -->
                   <span class="method-name">pageLandingOnHomepageAndUrlVerificationTC01</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eff9484c9f0be02d487311db884f5af5, get [url]]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 116.0.5845.180, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\RANJIT~1.SIV\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59774}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59774/devtoo..., se:cdpVersion: 116.0.5845.180, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eff9484c9f0be02d487311db884f5af5
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:629)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
-	at com.drivermanager.Driver.invokeApp(Driver.java:68)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	... 34 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:254)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingInvalidCredentialerrormsgTC05(newwcsss, Qatest@12323)">
+                  </a> <!-- verifyingInvalidCredentialerrormsgTC05(newwcsss, Qatest@12323) -->
+                  <span class="method-name">verifyingInvalidCredentialerrormsgTC05</span>
+                  <span class="parameters">(newwcsss, Qatest@12323)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingLogInPageElementsTC02">
+                  </a> <!-- verifyingLogInPageElementsTC02 -->
+                  <span class="method-name">verifyingLogInPageElementsTC02</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingLoginPageErrorMsgTC03">
+                  </a> <!-- verifyingLoginPageErrorMsgTC03 -->
+                  <span class="method-name">verifyingLoginPageErrorMsgTC03</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingLoginwithvalidcredentialsTC04">
+                  </a> <!-- verifyingLoginwithvalidcredentialsTC04 -->
+                  <span class="method-name">verifyingLoginwithvalidcredentialsTC04</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.ForgotPasswordTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingErrorMsgOfResetPasswordPageTC07">
+                  </a> <!-- verifyingErrorMsgOfResetPasswordPageTC07 -->
+                  <span class="method-name">verifyingErrorMsgOfResetPasswordPageTC07</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingForgetPwdPageNavigationTC06">
+                  </a> <!-- verifyingForgetPwdPageNavigationTC06 -->
+                  <span class="method-name">verifyingForgetPwdPageNavigationTC06</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingResetPasswordflowTC08">
+                  </a> <!-- verifyingResetPasswordflowTC08 -->
+                  <span class="method-name">verifyingResetPasswordflowTC08</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.VoucherListTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="allPageNavigationAndVerifyingEntriesTC22">
+                  </a> <!-- allPageNavigationAndVerifyingEntriesTC22 -->
+                  <span class="method-name">allPageNavigationAndVerifyingEntriesTC22</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadVoucherVerificationTC24">
+                  </a> <!-- downloadVoucherVerificationTC24 -->
+                  <span class="method-name">downloadVoucherVerificationTC24</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="voucherSearchInVoucherlistTC23">
+                  </a> <!-- voucherSearchInVoucherlistTC23 -->
+                  <span class="method-name">voucherSearchInVoucherlistTC23</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.ReactivateRequestFlowTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingReactivateRejectFlowTC19">
+                  </a> <!-- verifyingReactivateRejectFlowTC19 -->
+                  <span class="method-name">verifyingReactivateRejectFlowTC19</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.RefundRequestFlowTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="refundRejectTC21">
+                  </a> <!-- refundRejectTC21 -->
+                  <span class="method-name">refundRejectTC21</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcases.ProfilePageTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingLogoutFlowTC12">
+                  </a> <!-- verifyingLogoutFlowTC12 -->
+                  <span class="method-name">verifyingLogoutFlowTC12</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingProfileDetailsTC09">
+                  </a> <!-- verifyingProfileDetailsTC09 -->
+                  <span class="method-name">verifyingProfileDetailsTC09</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyingProfilePictureUploadTC11">
+                  </a> <!-- verifyingProfilePictureUploadTC11 -->
+                  <span class="method-name">verifyingProfilePictureUploadTC11</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyinguserabletoeditprofiledetailsTC10">
+                  </a> <!-- verifyinguserabletoeditprofiledetailsTC10 -->
+                  <span class="method-name">verifyinguserabletoeditprofiledetailsTC10</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ranjithkumar.sivakum\eclipse-workspace\Emircom\testng.xml</span>
+            <span class="header-content">C:\Users\ranjithkumar.sivakum\git\EmirateDriving-EDC\Emircom\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -191,6 +614,13 @@ Caused by: java.net.SocketException: Connection reset
     &lt;parameter name=&quot;browsername&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.testcases.LogInTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.ForgotPasswordTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.ProfilePageTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.VoucherCreationAndCancelTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.RedeemingAndDecliningTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.ReactivateRequestFlowTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.RefundRequestFlowTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.VoucherListTestCases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test run --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -204,7 +634,7 @@ Caused by: java.net.SocketException: Connection reset
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test run (1 class)</span>
+                <span class="test-name">Test run (8 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,16 +660,108 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(24);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'pageLandingOnHomepageAndUrlVerificationTC01')
-data.setCell(0, 2, 'com.testcases.LogInTestCases')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'verifyingReactivateRejectFlowTC19')
+data.setCell(0, 2, 'com.testcases.ReactivateRequestFlowTestCases')
+data.setCell(0, 3, 281116);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'refundRejectTC21')
+data.setCell(1, 2, 'com.testcases.RefundRequestFlowTestCases')
+data.setCell(1, 3, 236886);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'voucherSearchInVoucherlistTC23')
+data.setCell(2, 2, 'com.testcases.VoucherListTestCases')
+data.setCell(2, 3, 189188);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'redeemingVoucherTC16')
+data.setCell(3, 2, 'com.testcases.RedeemingAndDecliningTestCases')
+data.setCell(3, 3, 157698);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'downloadVoucherVerificationTC24')
+data.setCell(4, 2, 'com.testcases.VoucherListTestCases')
+data.setCell(4, 3, 134194);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'decliningVoucherTC17')
+data.setCell(5, 2, 'com.testcases.RedeemingAndDecliningTestCases')
+data.setCell(5, 3, 121126);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'voucherCreationAsCSSTC13')
+data.setCell(6, 2, 'com.testcases.VoucherCreationAndCancelTestCases')
+data.setCell(6, 3, 116860);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'allPageNavigationAndVerifyingEntriesTC22')
+data.setCell(7, 2, 'com.testcases.VoucherListTestCases')
+data.setCell(7, 3, 111251);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'refundApproveTC20')
+data.setCell(8, 2, 'com.testcases.RefundRequestFlowTestCases')
+data.setCell(8, 3, 104056);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'voucherCreationAsGuestTC14')
+data.setCell(9, 2, 'com.testcases.VoucherCreationAndCancelTestCases')
+data.setCell(9, 3, 103072);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyingResetPasswordflowTC08')
+data.setCell(10, 2, 'com.testcases.ForgotPasswordTestCases')
+data.setCell(10, 3, 63165);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyingErrorMsgOfResetPasswordPageTC07')
+data.setCell(11, 2, 'com.testcases.ForgotPasswordTestCases')
+data.setCell(11, 3, 59432);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'cancellingVoucherTC15')
+data.setCell(12, 2, 'com.testcases.VoucherCreationAndCancelTestCases')
+data.setCell(12, 3, 39847);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyingLogoutFlowTC12')
+data.setCell(13, 2, 'com.testcases.ProfilePageTestCases')
+data.setCell(13, 3, 38952);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyingReactivateApprovalFlowTC18')
+data.setCell(14, 2, 'com.testcases.ReactivateRequestFlowTestCases')
+data.setCell(14, 3, 33367);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyingProfilePictureUploadTC11')
+data.setCell(15, 2, 'com.testcases.ProfilePageTestCases')
+data.setCell(15, 3, 32079);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyingLoginwithvalidcredentialsTC04')
+data.setCell(16, 2, 'com.testcases.LogInTestCases')
+data.setCell(16, 3, 21825);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyinguserabletoeditprofiledetailsTC10')
+data.setCell(17, 2, 'com.testcases.ProfilePageTestCases')
+data.setCell(17, 3, 20977);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyingProfileDetailsTC09')
+data.setCell(18, 2, 'com.testcases.ProfilePageTestCases')
+data.setCell(18, 3, 20975);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyingForgetPwdPageNavigationTC06')
+data.setCell(19, 2, 'com.testcases.ForgotPasswordTestCases')
+data.setCell(19, 3, 18328);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'pageLandingOnHomepageAndUrlVerificationTC01')
+data.setCell(20, 2, 'com.testcases.LogInTestCases')
+data.setCell(20, 3, 3073);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verifyingInvalidCredentialerrormsgTC05')
+data.setCell(21, 2, 'com.testcases.LogInTestCases')
+data.setCell(21, 3, 1859);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifyingLoginPageErrorMsgTC03')
+data.setCell(22, 2, 'com.testcases.LogInTestCases')
+data.setCell(22, 3, 595);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'verifyingLogInPageElementsTC02')
+data.setCell(23, 2, 'com.testcases.LogInTestCases')
+data.setCell(23, 3, 314);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 31 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -267,14 +789,223 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcases.LogInTestCases</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">invokeApp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">pageLandingOnHomepageAndUrlVerificationTC01</span>
-                <span class="method-start">32872 ms</span>
+                <span class="method-start">17846 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">24311 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingLogInPageElementsTC02</span>
+                <span class="method-start">28981 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">32612 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingLoginPageErrorMsgTC03</span>
+                <span class="method-start">36520 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">40420 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingLoginwithvalidcredentialsTC04</span>
+                <span class="method-start">44852 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">70809 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingInvalidCredentialerrormsgTC05(newwcsss, Qatest@12323)</span>
+                <span class="method-start">74227 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.ForgotPasswordTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">79384 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingForgetPwdPageNavigationTC06</span>
+                <span class="method-start">83485 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">105153 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingErrorMsgOfResetPasswordPageTC07</span>
+                <span class="method-start">108162 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">170785 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingResetPasswordflowTC08</span>
+                <span class="method-start">187558 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.ProfilePageTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">253942 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingProfileDetailsTC09</span>
+                <span class="method-start">258100 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">282278 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyinguserabletoeditprofiledetailsTC10</span>
+                <span class="method-start">285343 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">309519 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingProfilePictureUploadTC11</span>
+                <span class="method-start">312453 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">347760 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingLogoutFlowTC12</span>
+                <span class="method-start">363868 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.VoucherCreationAndCancelTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">406136 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">voucherCreationAsCSSTC13</span>
+                <span class="method-start">415803 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">535886 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">voucherCreationAsGuestTC14</span>
+                <span class="method-start">538687 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">645020 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">cancellingVoucherTC15</span>
+                <span class="method-start">650112 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.RedeemingAndDecliningTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">693239 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">redeemingVoucherTC16</span>
+                <span class="method-start">696456 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">857349 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">decliningVoucherTC17</span>
+                <span class="method-start">861067 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.ReactivateRequestFlowTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">985419 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyingReactivateApprovalFlowTC18</span>
+                <span class="method-start">989085 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">1025659 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyingReactivateRejectFlowTC19</span>
+                <span class="method-start">1028182 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.RefundRequestFlowTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">1312517 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">refundApproveTC20</span>
+                <span class="method-start">1322172 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">1429437 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">refundRejectTC21</span>
+                <span class="method-start">1433947 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcases.VoucherListTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">1674029 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">allPageNavigationAndVerifyingEntriesTC22</span>
+                <span class="method-start">1679199 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">1793613 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">voucherSearchInVoucherlistTC23</span>
+                <span class="method-start">1798584 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">invokeApp(chrome)</span>
+                <span class="method-start">1990972 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">downloadVoucherVerificationTC24</span>
+                <span class="method-start">1994818 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

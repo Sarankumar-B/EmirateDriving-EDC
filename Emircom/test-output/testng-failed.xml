@@ -8,12 +8,24 @@
   <test thread-count="5" name="Test run(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="com.testcases.LogInTestCases">
+      <class name="com.testcases.RedeemingAndDecliningTestCases">
         <methods>
-          <include name="pageLandingOnHomepageAndUrlVerificationTC01"/>
+          <include name="decliningVoucherTC17"/>
           <include name="invokeApp"/>
         </methods>
-      </class> <!-- com.testcases.LogInTestCases -->
+      </class> <!-- com.testcases.RedeemingAndDecliningTestCases -->
+      <class name="com.testcases.ReactivateRequestFlowTestCases">
+        <methods>
+          <include name="verifyingReactivateApprovalFlowTC18"/>
+          <include name="invokeApp"/>
+        </methods>
+      </class> <!-- com.testcases.ReactivateRequestFlowTestCases -->
+      <class name="com.testcases.RefundRequestFlowTestCases">
+        <methods>
+          <include name="refundApproveTC20"/>
+          <include name="invokeApp"/>
+        </methods>
+      </class> <!-- com.testcases.RefundRequestFlowTestCases -->
     </classes>
   </test> <!-- Test run(failed) -->
 </suite> <!-- Failed suite [Suite] -->
