@@ -57,7 +57,6 @@ public class BaseClass extends Driver {
 
 	/**
 	 * Entering in the textbox Element
-	 * 
 	 * @param element
 	 * @throws InterruptedException
 	 */

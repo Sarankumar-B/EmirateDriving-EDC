@@ -1,6 +1,5 @@
 package com.drivermanager;
 
-import java.awt.Dimension;
 import java.awt.Robot;
 import java.io.IOException;
 import java.time.Duration;

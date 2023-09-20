@@ -276,8 +276,8 @@ public class VoucherCreation extends BaseClass {
 				e.printStackTrace();
 			}
 		}
+		waitForElementToBeDisappear(Duration.ofSeconds(10), loadericon);
 		clickElement(VoucherCreation.paymentbtn);
-
 	}
 
 	/**
