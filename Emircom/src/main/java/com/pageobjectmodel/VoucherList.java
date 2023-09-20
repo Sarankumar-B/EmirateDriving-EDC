@@ -1,8 +1,10 @@
 package com.pageobjectmodel;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.fail;
 
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -74,11 +76,10 @@ public class VoucherList extends BaseClass {
 
 	@FindBy(xpath = "//a[contains(text(),'Download')]")
 	public static WebElement downloadinlist;
-	
+
 	@FindBy(xpath = "//a[text()=' Download ']")
 	public static WebElement downloadvoucher;
-	
-	
+
 	/**
 	 * Selecting the date in calender based on the user input
 	 * 
@@ -124,14 +125,14 @@ public class VoucherList extends BaseClass {
 		boolean buttonFound = false;
 		while (!buttonFound) {
 			try {
-				button = driver.findElement(By.xpath("//a[text()='"+ voucherId +"']"));
+				button = driver.findElement(By.xpath("//a[text()='" + voucherId + "']"));
 			} catch (org.openqa.selenium.NoSuchElementException e) {
 				button = null;
 			}
 			if (button != null) {
 				String statusinlist = driver
 						.findElement(By.xpath(
-								"(//td//a[text()='"+ voucherId +"']//following::td[@style='text-align:left;'])[5]"))
+								"(//td//a[text()='" + voucherId + "']//following::td[@style='text-align:left;'])[5]"))
 						.getText();
 				System.out.println(statusinlist);
 				System.out.println(voucherId);
@@ -154,4 +155,22 @@ public class VoucherList extends BaseClass {
 		return Integer.parseInt(split[2]);
 	}
 
+	public static void clickingDownload() {
+		clickbyjavascript(VoucherList.createdvoucherbtn);
+		clickElement(VoucherList.downloadinlist);
+		clickElement(VoucherList.downloadvoucher);
+	}
+	
+	public static void downloadFileVerification(String expectedPath) {
+	File downloadedFile = new File(expectedPath);
+    sleeptime3sec();
+    if (downloadedFile.exists()) {
+        System.out.println("File downloaded successfully!");
+        boolean file = downloadedFile.delete();
+        System.out.println(file);
+    } else {
+        System.out.println("File not found. Download may have failed.");
+        fail();
+    }
+	}
 }
