@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import com.configproperties.GetProperties;
-import com.testcases.BaseClass;
+import com.constants.FrameworkConstants;
 
 public class Driver {
 	public static Select s;
@@ -62,7 +62,7 @@ public class Driver {
 			browserName = caps.getBrowserName();
 			browserVersion = caps.getBrowserVersion();
 		}
-		BaseClass.pageFactoryInitiation();
+	    FrameworkConstants.pageFactoryInitiation();
 		driver.manage().window().maximize();		
 		driver.get(props.getProperty("URL"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	

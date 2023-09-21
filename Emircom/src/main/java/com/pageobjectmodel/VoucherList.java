@@ -4,16 +4,30 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
+import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import com.reports.ExtentLogger;
 import com.testcases.BaseClass;
+
+import ru.yandex.qatools.ashot.comparison.ImageDiff;
+import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 public class VoucherList extends BaseClass {
 
@@ -79,6 +93,21 @@ public class VoucherList extends BaseClass {
 
 	@FindBy(xpath = "//a[text()=' Download ']")
 	public static WebElement downloadvoucher;
+
+	@FindBy(xpath = "//img[@alt='LOGO']")
+	public static WebElement logo;
+
+	@FindBy(xpath = "//button[contains(.,'Filter')]")
+	public static WebElement filterbtn;
+
+	@FindBy(xpath = "//select[@name='vehicle_type']//option[not(text()='-- Select --')]//parent::select")
+	public static WebElement vehicledropdown;
+
+	@FindBy(xpath = "//select[@name='payment_method']//option[not(text()='-- Select --')]//parent::select")
+	public static WebElement paymentdropdown;
+
+	@FindBy(xpath = "//select[@name='voucher_status']//option[not(text()='-- Select --')]//parent::select")
+	public static WebElement voucherdropdown;
 
 	/**
 	 * Selecting the date in calender based on the user input
@@ -160,17 +189,76 @@ public class VoucherList extends BaseClass {
 		clickElement(VoucherList.downloadinlist);
 		clickElement(VoucherList.downloadvoucher);
 	}
-	
+
 	public static void downloadFileVerification(String expectedPath) {
-	File downloadedFile = new File(expectedPath);
-    sleeptime3sec();
-    if (downloadedFile.exists()) {
-        System.out.println("File downloaded successfully!");
-        boolean file = downloadedFile.delete();
-        System.out.println(file);
-    } else {
-        System.out.println("File not found. Download may have failed.");
-        fail();
-    }
+		File downloadedFile = new File(expectedPath);
+		sleeptime3sec();
+		if (downloadedFile.exists()) {
+			System.out.println("File downloaded successfully!");
+			boolean file = downloadedFile.delete();
+			System.out.println(file);
+		} else {
+			System.out.println("File not found. Download may have failed.");
+			fail();
+		}
 	}
+
+	static BufferedImage expectedImage;
+	static BufferedImage actualImage;
+
+	public static void fetchingexpectedandactualimg(String expectedImagePath) throws IOException {
+		File expectedImageFile = new File(expectedImagePath);
+		expectedImage = ImageIO.read(expectedImageFile);
+		File screenshot = logo.getScreenshotAs(OutputType.FILE);
+		actualImage = ImageIO.read(screenshot);
+	}
+
+	public static void comparingExpectedAndActualimg() {
+		ImageDiffer imgDiff = new ImageDiffer();
+		ImageDiff diff = imgDiff.makeDiff(expectedImage, actualImage);
+		if (diff.hasDiff()) {
+			System.out.println("Images are NOT same");
+			fail();
+		} else {
+			System.out.println("Images are same");
+		}
+	}
+
+	public static void iteratingDropDdown() {
+		VoucherList.filterbtn.click();
+		Select vehicleType = new Select(vehicledropdown);
+		List<WebElement> option1 = vehicleType.getOptions();
+		for (int i = 1; i < option1.size(); i++) {
+			vehicleType.selectByIndex(i);
+
+			Select paymentMode = new Select(paymentdropdown);
+			List<WebElement> option2 = paymentMode.getOptions();
+			for (int j = 1; j < option2.size(); j++) {
+				paymentMode.selectByIndex(j);
+
+				Select voucherStatus = new Select(voucherdropdown);
+				List<WebElement> option3 = voucherStatus.getOptions();
+				for (int k = 1; k < option3.size(); k++) {
+					voucherStatus.selectByIndex(k);
+					String selectedVehicle = option1.get(i).getText();
+					String selectedPayment = option2.get(j).getText();
+					String selectedStatus = option3.get(k).getText();
+					driver.findElement(By.xpath("//button[text()='Apply']")).click();
+					sleeptime();
+					try {
+						String totalCount = VoucherList.totalvouchercount.getText();
+						String[] split = totalCount.split(" ");
+						ExtentLogger.pass("Selected options: " + selectedVehicle + ", " + selectedPayment + ", "
+								+ selectedStatus + ", " + split[1] + split[2]);
+					} catch (NoSuchElementException e) {
+						String totalCount = driver.findElement(By.xpath("//td[text()='No Records Found']")).getText();
+						ExtentLogger.pass("Selected options: " + selectedVehicle + ", " + selectedPayment + ", "
+								+ selectedStatus + ", " + totalCount);
+					}
+					VoucherList.filterbtn.click();
+				}
+			}
+		}
+	}
+
 }

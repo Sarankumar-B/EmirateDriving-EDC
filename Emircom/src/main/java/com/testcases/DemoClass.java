@@ -1,9 +1,10 @@
 package com.testcases;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import com.pageobjectmodel.LogIn;
 
 public class DemoClass extends BaseClass {
 
@@ -11,29 +12,16 @@ public class DemoClass extends BaseClass {
 	
 		
 		public static void main(String[] args) {
-	        try {
-	            // Load the input image
-	            File inputFile = new File("C:\\Users\\ranjithkumar.sivakum\\Downloads\\img3.png"); // Replace with the path to your input image
-	            BufferedImage inputImage = ImageIO.read(inputFile);
+			
+			LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 
-	            // Define the output image format (e.g., "PNG" or "JPEG")
-	            String outputFormat = "PNG";
-
-	            // Define the output file path and name
-	            File outputFile = new File("./src/test/resources/Screenshot/img6.png"); // Replace with the desired output path and filename
-
-	            // Write the image in the new format
-	            ImageIO.write(inputImage, outputFormat, outputFile);
-
-	            System.out.println("Image format conversion completed.");
-
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-		
-		
-	    
-
-	}
+			driver.findElement(By.xpath("//button[contains(.,'Filter')]")).click();
+			
+			String dropdown1Id = "//select[@name='vehicle_type']//option[not(text()='-- Select --')]";
+			Select dropdown1 = new Select(driver.findElement(By.id(dropdown1Id)));
+			for (WebElement option1 : dropdown1.getOptions()) {
+				option1.click();
+			}
+		}
 
 }

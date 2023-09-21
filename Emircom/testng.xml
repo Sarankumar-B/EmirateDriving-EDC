@@ -10,15 +10,15 @@
 	<test name="Test run">
 		<parameter name="browsername" value="chrome"></parameter>
 		<classes>
-<!--			<class name="com.testcases.LogInTestCases" />-->
+			<class name="com.testcases.LogInTestCases" />
 <!--			<class name="com.testcases.ForgotPasswordTestCases" />-->
 <!--			<class name="com.testcases.ProfilePageTestCases" />-->
 <!--			<class name="com.testcases.VoucherCreationAndCancelTestCases" />-->
 <!--			<class name="com.testcases.RedeemingAndDecliningTestCases" />-->
 <!--			<class name="com.testcases.ReactivateRequestFlowTestCases" />-->
 <!--			<class name="com.testcases.RefundRequestFlowTestCases" />-->
-			<class name="com.testcases.VoucherListTestCases" />
-<!--			<class name="com.testcases.Sample" />-->
+<!--			<class name="com.testcases.VoucherListTestCases" />-->
+			<class name="com.testcases.Sample" />
 		</classes>
 	</test>
 </suite>

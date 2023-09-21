@@ -32,15 +32,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.drivermanager.Driver;
-import com.pageobjectmodel.Forgetpwd;
-import com.pageobjectmodel.LogIn;
-import com.pageobjectmodel.Profile;
-import com.pageobjectmodel.ReactivateRefund;
-import com.pageobjectmodel.ResetPwd;
-import com.pageobjectmodel.VoucherCreation;
-import com.pageobjectmodel.VoucherDecline;
-import com.pageobjectmodel.VoucherList;
-import com.pageobjectmodel.VoucherRedeem;
 import com.reports.ExtentLogger;
 import com.reports.ExtentReport;
 
@@ -57,6 +48,7 @@ public class BaseClass extends Driver {
 
 	/**
 	 * Entering in the textbox Element
+	 * 
 	 * @param element
 	 * @throws InterruptedException
 	 */
@@ -155,7 +147,7 @@ public class BaseClass extends Driver {
 	/**
 	 * sleeptime till 5sec
 	 */
-	public void sleeptime() {
+	public static void sleeptime() {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -268,7 +260,7 @@ public class BaseClass extends Driver {
 		sleeptime3sec();
 
 	}
-	
+
 	/**
 	 * To perform CTRL+V action
 	 * 
@@ -343,65 +335,6 @@ public class BaseClass extends Driver {
 		s.selectByIndex(index);
 	}
 
-	/**
-	 * 
-	 * Page factory initiation for the driver
-	 * 
-	 */
-	public static void pageFactoryInitiation() {
-		LogIn.pagefactoyinit();
-		VoucherCreation.pagefactoryinit();
-		Forgetpwd.pagefactoyinit();
-		ResetPwd.pagefactoyinit();
-		Profile.pagefactoyinit();
-		VoucherList.pagefactoryinit();
-		VoucherRedeem.pagefactoryinit();
-		VoucherDecline.pagefactoryinit();
-		ReactivateRefund.pagefactoyinit();
-	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 
 	public void mousehoverandclickbyxpath(String xpathVal) throws MoveTargetOutOfBoundsException {
@@ -432,14 +365,13 @@ public class BaseClass extends Driver {
 
 	}
 
-
 	public void clickByXpath(By passbtn) {
 		try {
 			driver.findElement(passbtn).click();
 			System.out.println("The element of xpath " + passbtn + " is clicked");
 		} catch (NoSuchElementException e) {
 			System.err.println("The element of xpath " + passbtn + " is not available in the DOM ");
-		
+
 		} catch (StaleElementReferenceException e) {
 			System.err.println("The element of  xpath " + passbtn + " is modified ");
 		} catch (ElementClickInterceptedException e) {
@@ -493,7 +425,6 @@ public class BaseClass extends Driver {
 
 	}
 
-
 	public static void gettext(WebElement element) {
 
 		String text = element.getText();
@@ -511,8 +442,6 @@ public class BaseClass extends Driver {
 		s.selectByVisibleText(txt);
 
 	}
-
-
 
 	public static void alertaccept() {
 		a = driver.switchTo().alert();

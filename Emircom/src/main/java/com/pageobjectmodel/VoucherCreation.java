@@ -247,6 +247,7 @@ public class VoucherCreation extends BaseClass {
 		sendKeys(emiratesid, emiratesIdGenrator());
 		sendKeys(tryfilenumber, trifile);
 		keyactions(KeyEvent.VK_TAB);
+		waitForElementToBeDisappear(Duration.ofSeconds(5), loadericon);
 		clickElement(Profile.okbtn);
 		sendKeys(nameplaceholder, "ranjith");
 		waitForElementToBeDisappear(Duration.ofSeconds(10), loadericon);

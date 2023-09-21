@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherListTestCases" class="method navigator-link" hash-for-method="capture">capture</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.testcases.VoucherListTestCases" class="method navigator-link" hash-for-method="downloadVoucherVerificationTC24">downloadVoucherVerificationTC24</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.testcases.LogInTestCases" class="method navigator-link" hash-for-method="pageLandingOnHomepageAndUrlVerificationTC01">pageLandingOnHomepageAndUrlVerificationTC01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,21 +122,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.testcases.VoucherListTestCases</span>
+              <span class="class-name">com.testcases.LogInTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="capture">
-                  </a> <!-- capture -->
-                  <span class="method-name">capture</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="downloadVoucherVerificationTC24">
-                  </a> <!-- downloadVoucherVerificationTC24 -->
-                  <span class="method-name">downloadVoucherVerificationTC24</span>
+                  <a name="pageLandingOnHomepageAndUrlVerificationTC01">
+                  </a> <!-- pageLandingOnHomepageAndUrlVerificationTC01 -->
+                  <span class="method-name">pageLandingOnHomepageAndUrlVerificationTC01</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,7 +151,8 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test run&quot;&gt;
     &lt;parameter name=&quot;browsername&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.testcases.VoucherListTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.LogInTestCases&quot;/&gt;
+      &lt;class name=&quot;com.testcases.Sample&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test run --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -177,7 +166,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test run (1 class)</span>
+                <span class="test-name">Test run (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,20 +192,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'downloadVoucherVerificationTC24')
-data.setCell(0, 2, 'com.testcases.VoucherListTestCases')
-data.setCell(0, 3, 141624);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'capture')
-data.setCell(1, 2, 'com.testcases.VoucherListTestCases')
-data.setCell(1, 3, 238);
+data.setCell(0, 1, 'pageLandingOnHomepageAndUrlVerificationTC01')
+data.setCell(0, 2, 'com.testcases.LogInTestCases')
+data.setCell(0, 3, 3048);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -231,18 +216,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.testcases.VoucherListTestCases</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">voucherSearchInVoucherlistTC23</span>
-                <br/>
-                <span class="ignored-method-name">allPageNavigationAndVerifyingEntriesTC22</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -251,22 +227,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.testcases.VoucherListTestCases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.testcases.LogInTestCases</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">invokeApp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">capture</span>
-                <span class="method-start">7375 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">invokeApp(chrome)</span>
-                <span class="method-start">10943 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">downloadVoucherVerificationTC24</span>
-                <span class="method-start">15215 ms</span>
+                <span class="method-name">pageLandingOnHomepageAndUrlVerificationTC01</span>
+                <span class="method-start">8747 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
