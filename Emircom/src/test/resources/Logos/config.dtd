@@ -1,0 +1,10 @@
+<!ELEMENT extentreports (configuration)>
+<!ELEMENT configuration (theme,enableTimeline,encoding,protocol,documentTitle,reportName,scripts,styles)>
+<!ELEMENT theme (#PCDATA)>
+<!ELEMENT enableTimeline (#PCDATA)>
+<!ELEMENT encoding (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT documentTitle (#PCDATA)>
+<!ELEMENT reportName EMPTY>
+<!ELEMENT scripts EMPTY>
+<!ELEMENT styles EMPTY>
