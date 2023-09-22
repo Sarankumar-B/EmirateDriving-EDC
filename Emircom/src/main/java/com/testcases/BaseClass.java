@@ -82,10 +82,17 @@ public class BaseClass extends Driver {
 		}
 	}
 
-	public static void clickbyjavascript(WebElement m) {
-		waitForElementToBeClickable(Duration.ofSeconds(10), m);
+	public static void clickbyjavascript(WebElement element) {
+		waitForElementToBeClickable(Duration.ofSeconds(10), element);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", m);
+		js.executeScript("arguments[0].click();", element);
+		try {
+			String text = element.getText();
+			if (!text.isEmpty()) {
+				ExtentLogger.info(text + " is clicked");
+			}
+		} catch (WebDriverException e) {
+		}
 	}
 
 	/**

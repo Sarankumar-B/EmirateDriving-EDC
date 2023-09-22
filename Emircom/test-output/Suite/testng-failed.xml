@@ -8,15 +8,12 @@
   <test thread-count="5" name="Test run(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="com.testcases.LogInTestCases">
+      <class name="com.testcases.Sample">
         <methods>
-          <include name="verifyingLogInPageElementsTC02"/>
-          <include name="pageLandingOnHomepageAndUrlVerificationTC01"/>
-          <include name="verifyingLoginwithvalidcredentialsTC04"/>
-          <include name="verifyingInvalidCredentialerrormsgTC05"/>
+          <include name="voucherCreationPageErrormsgValidation"/>
           <include name="invokeApp"/>
         </methods>
-      </class> <!-- com.testcases.LogInTestCases -->
+      </class> <!-- com.testcases.Sample -->
     </classes>
   </test> <!-- Test run(failed) -->
 </suite> <!-- Failed suite [Suite] -->

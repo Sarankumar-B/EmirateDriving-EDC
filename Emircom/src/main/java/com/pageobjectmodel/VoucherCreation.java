@@ -162,6 +162,50 @@ public class VoucherCreation extends BaseClass {
 	@FindBy(xpath = "//input[@placeholder='Applicant Name']")
 	public static WebElement nameplaceholder;
 
+	@FindBy(xpath = "//label[.='Please enter Emirates Id']")
+	public static WebElement enteremiratesid;
+	
+	@FindBy(xpath = "//label[.='Emirates Id should be 15 numbers']")
+	public static WebElement idshouldbe15no;
+	
+	@FindBy(xpath = "//label[.='Applicant Name Error']")
+	public static WebElement nameerror;
+	
+	@FindBy(xpath = "//label[.='Please select Date of Birth']")
+	public static WebElement selectdob;
+	
+	@FindBy(xpath = "//label[.='Age should be greater than 16']")
+	public static WebElement ageshouldgreaterthan15;
+	
+	@FindBy(xpath = "//label[.='Age should be less than 110']")
+	public static WebElement ageshouldlessthan110;
+	
+	@FindBy(xpath = "//label[.='Please enter Mobile Number']")
+	public static WebElement entermobilenumerrmsg;
+	
+	@FindBy(xpath = "//label[.='Invalid Mobile Number']")
+	public static WebElement invalidnumerrmsg;
+	
+	@FindBy(xpath = "//label[.='Please enter WhatsApp Number']")
+	public static WebElement enterwpmobilenumerrmsg;
+	
+	@FindBy(xpath = "//label[.='Please enter Email Id']")
+	public static WebElement enteremailerrmsg;
+	
+	@FindBy(xpath = "//label[.='Invalid Email Id']")
+	public static WebElement invalidemail;
+	
+	@FindBy(xpath = "//label[.='Please select Branch']")
+	public static WebElement selectbranch;
+	
+	@FindBy(xpath = "//label[.='Please select Vehicle Type']")
+	public static WebElement selecttype;
+	
+	@FindBy(xpath = "//label[.='Please enter Tryfile Number']")
+	public static WebElement entertryfilemno;
+	
+	
+	
 	/**
 	 * Generating a dynamic 15 digit numbers with current time for unique emirates
 	 * Id
@@ -351,5 +395,57 @@ public class VoucherCreation extends BaseClass {
 			throw new Exception("Invalid date is provided, please check input date");
 		}
 	}
-
+	
+	
+	public static void errorMsgValidations() throws Exception {
+	clickElement(LogIn.voucherimg);
+	clickElement(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.enteremiratesid);
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	sendKeys(VoucherCreation.emiratesid, "122345");
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.idshouldbe15no);
+	VoucherCreation.emiratesid.clear();
+	sendKeys(VoucherCreation.emiratesid, VoucherCreation.emiratesIdGenrator());
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.nameerror);
+	sendKeys(VoucherCreation.nameplaceholder, getproperty("Newfn"));
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.selectdob);
+	VoucherCreation.selectDate("12-09-2023");
+	VoucherCreation.dob.clear();
+	elementpresence(VoucherCreation.ageshouldgreaterthan15);
+	sendKeys(VoucherCreation.dob, getproperty("Age120"));
+	VoucherCreation.dob.clear();
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.ageshouldlessthan110);
+	sendKeys(VoucherCreation.dob, getproperty("Age19"));
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	sleeptime3sec();
+	elementpresence(VoucherCreation.entermobilenumerrmsg);
+	sendKeys(VoucherCreation.mobileno, "1234556");
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.invalidnumerrmsg);
+	VoucherCreation.mobileno.clear();
+	sendKeys(VoucherCreation.mobileno, VoucherCreation.mobileNumber());
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.enterwpmobilenumerrmsg);
+	clickbyjavascript(VoucherCreation.whatsappcheckbox);
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.enteremailerrmsg);
+	sendKeys(VoucherCreation.emailid, "sample");
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.invalidemail);
+	VoucherCreation.emailid.clear();
+	sendKeys(VoucherCreation.emailid, VoucherCreation.generateGmailIdWithCurrentTime());
+	elementpresence(VoucherCreation.selectbranch);
+	selectbyindex(VoucherCreation.branch, 4);
+	clickbyjavascript(VoucherCreation.paymentbtn);
+	elementpresence(VoucherCreation.entertryfilemno);
+	sendKeys(VoucherCreation.tryfilenumber, "1234003");
+	keyactions(KeyEvent.VK_TAB);
+	waitForElementToBeDisappear(Duration.ofSeconds(10), VoucherCreation.loadericon);
+	clickElement(Profile.okbtn);
+	elementpresence(VoucherCreation.selecttype);
+	}
 }

@@ -46,6 +46,12 @@ public class VoucherListTestCases extends BaseClass {
 	}
 	
 	
+	@Test(priority = 6, enabled = true)
+	private void verifyingErrorMsgOfVoucherCreationTC27() throws Exception {
+		VoucherCreation.errorMsgValidations();
+	}
+	
+	
 	
 	
 	

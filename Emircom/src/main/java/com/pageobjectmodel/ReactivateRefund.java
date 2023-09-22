@@ -117,6 +117,8 @@ public class ReactivateRefund extends BaseClass {
 		sendKeys(VoucherList.remarks, "Reactivate the Request");
 
 		clickElement(ReactivateRefund.reactivatereqbutton);
+		
+		waitForElementToBeDisappear(Duration.ofSeconds(10), VoucherCreation.loadericon);
 
 		clickElement(Profile.okbtn);
 
