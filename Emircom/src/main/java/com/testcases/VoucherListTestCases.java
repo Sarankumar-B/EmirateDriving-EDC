@@ -30,7 +30,7 @@ public class VoucherListTestCases extends BaseClass {
 		VoucherRedeem.gettingvoucherid();
 		VoucherRedeem.searchVoucherId();
 		VoucherList.clickingDownload();
-		VoucherList.downloadFileVerification("C:\\Users\\ranjithkumar.sivakum\\Downloads\\voucher_"+VoucherRedeem.voucherId+".pdf");
+		VoucherList.downloadFileVerification(getproperty("Download")+"//voucher_"+VoucherRedeem.voucherId+".pdf");
 	}
 
 	@Test(priority = 4, enabled = true)

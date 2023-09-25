@@ -8,12 +8,12 @@
   <test thread-count="5" name="Test run(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="com.testcases.Sample">
+      <class name="com.testcases.DemoClass">
         <methods>
-          <include name="voucherCreationPageErrormsgValidation"/>
+          <include name="fetch"/>
           <include name="invokeApp"/>
         </methods>
-      </class> <!-- com.testcases.Sample -->
+      </class> <!-- com.testcases.DemoClass -->
     </classes>
   </test> <!-- Test run(failed) -->
 </suite> <!-- Failed suite [Suite] -->

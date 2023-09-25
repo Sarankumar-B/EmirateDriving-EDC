@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-22T12:59:37 IST" name="Suite" finished-at="2023-09-22T13:00:27 IST" duration-ms="50322">
+  <suite started-at="2023-09-25T18:20:42 IST" name="Suite" finished-at="2023-09-25T18:22:04 IST" duration-ms="81395">
     <groups>
     </groups>
-    <test started-at="2023-09-22T12:59:37 IST" name="Test run" finished-at="2023-09-22T13:00:27 IST" duration-ms="50322">
-      <class name="com.testcases.Sample">
-        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.Sample@47e2e487]" started-at="2023-09-22T12:59:37 IST" name="invokeApp" finished-at="2023-09-22T12:59:47 IST" duration-ms="9915" status="PASS">
+    <test started-at="2023-09-25T18:20:42 IST" name="Test run" finished-at="2023-09-25T18:22:04 IST" duration-ms="81395">
+      <class name="com.testcases.DemoClass">
+        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.DemoClass@68702e03]" started-at="2023-09-25T18:20:42 IST" name="invokeApp" finished-at="2023-09-25T18:21:23 IST" duration-ms="40920" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
-        <test-method signature="voucherCreationPageErrormsgValidation()[pri:0, instance:com.testcases.Sample@47e2e487]" started-at="2023-09-22T12:59:47 IST" name="voucherCreationPageErrormsgValidation" finished-at="2023-09-22T13:00:24 IST" duration-ms="37008" status="PASS">
+        <test-method signature="fetch()[pri:0, instance:com.testcases.DemoClass@68702e03]" started-at="2023-09-25T18:21:23 IST" name="fetch" finished-at="2023-09-25T18:22:01 IST" duration-ms="37074" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- voucherCreationPageErrormsgValidation -->
-      </class> <!-- com.testcases.Sample -->
+        </test-method> <!-- fetch -->
+      </class> <!-- com.testcases.DemoClass -->
     </test> <!-- Test run -->
   </suite> <!-- Suite -->
 </testng-results>

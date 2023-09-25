@@ -200,7 +200,7 @@ public class BaseClass extends Driver {
 		for (String windowHandle : driver.getWindowHandles()) {
 			if (!originalWindow.contentEquals(windowHandle)) {
 				driver.switchTo().window(windowHandle);
-				sleeptime3sec();
+				sleeptime();
 				break;
 			}
 		}
@@ -318,6 +318,7 @@ public class BaseClass extends Driver {
 	 */
 	public static void waitForElementToBeDisappear(Duration seconds, By element) {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
 	}
 

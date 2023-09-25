@@ -109,6 +109,9 @@ public class VoucherList extends BaseClass {
 	@FindBy(xpath = "//select[@name='voucher_status']//option[not(text()='-- Select --')]//parent::select")
 	public static WebElement voucherdropdown;
 
+	@FindBy(xpath = "//button[contains(text(),'Export csv')]")
+	public static WebElement exportcsv;
+
 	/**
 	 * Selecting the date in calender based on the user input
 	 * 
@@ -190,16 +193,34 @@ public class VoucherList extends BaseClass {
 		clickElement(VoucherList.downloadvoucher);
 	}
 
+	public static String timeStamp() {
+		long currentTimeMillis = System.currentTimeMillis();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH");
+		return dateFormat.format(new Date(currentTimeMillis));
+	}
+
+	static boolean fileexists=false;
 	public static void downloadFileVerification(String expectedPath) {
+		sleeptime();
 		File downloadedFile = new File(expectedPath);
-		sleeptime3sec();
-		if (downloadedFile.exists()) {
-			System.out.println("File downloaded successfully!");
-			boolean file = downloadedFile.delete();
-			System.out.println(file);
-		} else {
-			System.out.println("File not found. Download may have failed.");
+		
+		if (fileexists) {
+			System.out.println(expectedPath+ "File not found. Download may have failed.");
 			fail();
+		}
+		while (!fileexists) {
+		    if (downloadedFile.exists()) {
+		    	ExtentLogger.pass(expectedPath+" File downloaded successfully!");
+				System.out.println();
+				boolean file = downloadedFile.delete();
+				System.out.println(file);
+		        fileexists=true;
+		} 
+		    try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

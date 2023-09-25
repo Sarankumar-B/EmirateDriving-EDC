@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.VoucherListTestCases">
+      <class name="com.testcases.Sample">
         <methods>
-          <include name="closebrowser"/>
-          <include name="pageNavigationAndVerifyingEntries"/>
+          <include name="voucherCreationPageErrormsgValidation"/>
           <include name="invokeApp"/>
         </methods>
-      </class> <!-- com.testcases.VoucherListTestCases -->
+      </class> <!-- com.testcases.Sample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
