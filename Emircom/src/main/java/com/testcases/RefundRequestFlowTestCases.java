@@ -11,7 +11,7 @@ public class RefundRequestFlowTestCases extends BaseClass {
 	/**
 	 * Verifying the refund approval flow
 	 */
-	@Test(priority = 1)
+	@Test
 	public void refundApproveTC20() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.creatingVoucher(VoucherCreation.createvoucherbtn, getproperty("Tri2"), getproperty("Age19"),
@@ -33,7 +33,7 @@ public class RefundRequestFlowTestCases extends BaseClass {
 	/**
 	 * Verifying the refund rejection flow
 	 */
-	@Test(priority = 2)
+	@Test
 	public void refundRejectTC21() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.creatingVoucher(VoucherCreation.createvoucherbtn, getproperty("Tri2"), getproperty("Age19"),

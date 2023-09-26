@@ -9,19 +9,19 @@ import com.pageobjectmodel.VoucherRedeem;
 
 public class VoucherListTestCases extends BaseClass {
 
-	@Test(priority = 1, enabled = true)
+	@Test
 	private void allPageNavigationAndVerifyingEntriesTC22() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherList.pageNavigatingandverifying();
 	}
 
-	@Test(priority = 2,  enabled = true)
+	@Test
 	private void voucherSearchInVoucherlistTC23() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherList.searchVoucherIdAndVerifyingStatus(VoucherList.voucherbycurrentdate);
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test
 	private void downloadVoucherVerificationTC24() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.creatingVoucher(VoucherCreation.createvoucherbtn, getproperty("Tri4"), getproperty("Age31"),
@@ -30,40 +30,31 @@ public class VoucherListTestCases extends BaseClass {
 		VoucherRedeem.gettingvoucherid();
 		VoucherRedeem.searchVoucherId();
 		VoucherList.clickingDownload();
-		VoucherList.downloadFileVerification(getproperty("Download")+"//voucher_"+VoucherRedeem.voucherId+".pdf");
+		VoucherList.downloadFileVerification(System.getProperty("user.dir") + getproperty("Download") + "//voucher_"
+				+ VoucherRedeem.voucherId + ".pdf");
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test
 	private void logoDiffeVerificationTC25() throws IOException {
 		VoucherList.fetchingexpectedandactualimg("./src/test/resources/Logos/img3.png");
 		VoucherList.comparingExpectedAndActualimg();
 	}
-	
-	@Test(priority = 5, enabled = true)
+
+	@Test
 	private void verifyingFilterFlowTC26() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
-		VoucherList.iteratingDropDdown();		
+		VoucherList.iteratingDropDdown();
 	}
-	
-	
-	@Test(priority = 6, enabled = true)
+
+	@Test
 	private void verifyingErrorMsgOfVoucherCreationTC27() throws Exception {
 		VoucherCreation.errorMsgValidations();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	@Test
+	private void verifyingExportingCsvTC28() {
+		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
+		VoucherList.exportingCSV();
+	}
+
 }

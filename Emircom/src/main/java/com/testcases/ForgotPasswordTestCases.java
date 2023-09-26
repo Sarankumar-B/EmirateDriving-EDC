@@ -11,7 +11,7 @@ public class ForgotPasswordTestCases extends BaseClass {
 	/**
 	 * Navigating to the forget password page verfication 
 	 */
-	@Test(priority = 1)
+	@Test
 	public void verifyingForgetPwdPageNavigationTC06() {
 		elementpresence(LogIn.forgetpwd);
 		clickElement(LogIn.forgetpwd);
@@ -33,7 +33,7 @@ public class ForgotPasswordTestCases extends BaseClass {
 	/**
 	 * Verify the error messages of the reset password page
 	 */
-	@Test(priority = 2)
+	@Test
 	public void verifyingErrorMsgOfResetPasswordPageTC07() {
 		Forgetpwd.gettinglinkforresetpass(props.getProperty("CssMailid"));
 		ResetPwd.clickingResetLinkInMailnator(getproperty("MailNatorURL"), getproperty("ValidUsr"));
@@ -48,7 +48,7 @@ public class ForgotPasswordTestCases extends BaseClass {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("Newpwd1"));
 	}
 
-	@Test(priority = 3)
+	@Test
 	/**
 	 * Verifying whether user able to reset the password by clicking on forget password
 	 */

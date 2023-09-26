@@ -8,7 +8,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
@@ -199,24 +198,25 @@ public class VoucherList extends BaseClass {
 		return dateFormat.format(new Date(currentTimeMillis));
 	}
 
-	static boolean fileexists=false;
+	static boolean fileexists = false;
+
 	public static void downloadFileVerification(String expectedPath) {
 		sleeptime();
 		File downloadedFile = new File(expectedPath);
-		
+
 		if (fileexists) {
-			System.out.println(expectedPath+ "File not found. Download may have failed.");
+			System.out.println(expectedPath + "File not found. Download may have failed.");
 			fail();
 		}
 		while (!fileexists) {
-		    if (downloadedFile.exists()) {
-		    	ExtentLogger.pass(expectedPath+" File downloaded successfully!");
+			if (downloadedFile.exists()) {
+				ExtentLogger.pass(expectedPath + " File downloaded successfully!");
 				System.out.println();
 				boolean file = downloadedFile.delete();
 				System.out.println(file);
-		        fileexists=true;
-		} 
-		    try {
+				fileexists = true;
+			}
+			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -278,6 +278,45 @@ public class VoucherList extends BaseClass {
 					}
 					VoucherList.filterbtn.click();
 				}
+			}
+		}
+	}
+
+	static boolean isFileFound;
+
+	public static void exportingCSV() {
+		VoucherList.exportcsv.click();
+		String timeStamp = VoucherList.timeStamp();
+		sleeptime();
+		// Verify if a file with a partial name exists in the download directory
+		String partialFileName = "voucher_list_" + timeStamp; // Replace with the desired partial name
+		long startTime = System.currentTimeMillis();
+		long twoMinutesInMillis = (long) 2 * 60 * 1000; // Two minutes in milliseconds
+		while (!isFileFound) {
+			isFileWithPartialNameDownloaded(partialFileName);
+			if (isFileFound) {
+				ExtentLogger.pass("File with partial name found.");
+			}
+			long currentTime = System.currentTimeMillis();
+			if (currentTime - startTime >= twoMinutesInMillis) {
+				ExtentLogger.pass("File with partial name not found.");
+				fail();
+			}
+		}
+
+	}
+
+	private static void isFileWithPartialNameDownloaded(String partialFileName) {
+		File downloadDirectory = new File(System.getProperty("user.dir") + getproperty("Download"));
+		File[] downloadedFiles = downloadDirectory.listFiles();
+		sleeptime();
+		for (File file : downloadedFiles) {
+			System.out.println(partialFileName);
+			System.out.println(file.getName());
+			if (file.getName().contains(partialFileName)) {
+				boolean delete = file.delete();
+				System.out.println(delete);
+				isFileFound = true;
 			}
 		}
 	}

@@ -13,7 +13,7 @@ public class ProfilePageTestCases extends BaseClass {
 	/**
 	 * Verifying the mandatory details of the user are present in the profile details
 	 */
-	@Test(priority = 1, enabled = true)
+	@Test
 	public void verifyingProfileDetailsTC09() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		mousehover(VoucherCreation.hamburgermenu);
@@ -29,7 +29,7 @@ public class ProfilePageTestCases extends BaseClass {
 	/**
 	 * Verifying whether user able to edit the profile details
 	 */
-	@Test(priority = 2, enabled = true)
+	@Test
 	public void verifyinguserabletoeditprofiledetailsTC10() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		Profile.navigateToEditProfile();
@@ -41,7 +41,7 @@ public class ProfilePageTestCases extends BaseClass {
 	/**
 	 * Verifying whether user able change the profile picture
 	 */
-	@Test(priority = 3, enabled = true)
+	@Test
 	public void verifyingProfilePictureUploadTC11() throws AWTException {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		Profile.navigateToEditProfile();
@@ -55,7 +55,7 @@ public class ProfilePageTestCases extends BaseClass {
 	/**
 	 * Verifying whether user able to logout
 	 */
-	@Test(priority = 4, enabled = true)
+	@Test
 	public void verifyingLogoutFlowTC12() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.clickLogOut();

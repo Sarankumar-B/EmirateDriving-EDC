@@ -11,7 +11,7 @@ public class ReactivateRequestFlowTestCases extends BaseClass {
 	/**
 	 * Verifying the reactivate approval flow
 	 */
-	@Test(priority = 1, enabled = true)
+	@Test
 	public void verifyingReactivateApprovalFlowTC18() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		ReactivateRefund.raisingReactivateRequest();
@@ -27,7 +27,7 @@ public class ReactivateRequestFlowTestCases extends BaseClass {
 	/**
 	 * Verifying the reactivate rejection flow
 	 */
-	@Test(priority = 2, enabled = true)
+	@Test
 	public void verifyingReactivateRejectFlowTC19() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.creatingVoucher(VoucherCreation.createvoucherbtn, getproperty("Tri2"), getproperty("Age19"),

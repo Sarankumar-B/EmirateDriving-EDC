@@ -293,12 +293,8 @@ public class VoucherCreation extends BaseClass {
 		clickbyjavascript(Profile.okbtn);
 		sendKeys(nameplaceholder, "ranjith");
 		waitForElementToBeDisappear(Duration.ofSeconds(10), loadericon);
+		sendKeys(dob, age);
 		sendKeys(mobileno, mobileNumber());
-		try {
-			selectDate(age);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		clickbyjavascript(whatsappcheckbox);
 		String gmailIdWithCurrentTime = generateGmailIdWithCurrentTime();
 		sendKeys(email, gmailIdWithCurrentTime);
@@ -440,9 +436,5 @@ public class VoucherCreation extends BaseClass {
 		clickbyjavascript(VoucherCreation.paymentbtn);
 		elementpresence(VoucherCreation.entertryfilemno);
 		sendKeys(VoucherCreation.tryfilenumber, "1234003");
-		keyactions(KeyEvent.VK_TAB);
-		waitForElementToBeDisappear(Duration.ofSeconds(10), VoucherCreation.loadericon);
-		clickElement(Profile.okbtn);
-		elementpresence(VoucherCreation.selecttype);
 	}
 }

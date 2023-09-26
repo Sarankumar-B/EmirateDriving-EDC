@@ -19,7 +19,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import com.configproperties.GetProperties;
 import com.constants.FrameworkConstants;
-import com.testcases.BaseClass;
 
 public class Driver {
 	public static Select s;
@@ -46,7 +45,6 @@ public class Driver {
 			ChromeOptions options = new ChromeOptions();
 			HashMap<String, Object> chromePrefs = new HashMap<>();
 			chromePrefs.put("download.default_directory", System.getProperty("user.dir")+props.getProperty("Download")); // Set your desired download directory
-			System.out.println(props.getProperty("Download"));
 			options.setExperimentalOption("prefs", chromePrefs);
 			options.setAcceptInsecureCerts(true);
 			driver = new ChromeDriver(options);

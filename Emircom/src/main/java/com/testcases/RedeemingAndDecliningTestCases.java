@@ -10,7 +10,7 @@ public class RedeemingAndDecliningTestCases extends BaseClass {
 	/**
 	 * Verifying the redeeming flow 
 	 */
-	@Test(priority = 1, enabled = true)
+	@Test
 	public void redeemingVoucherTC16() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.creatingVoucher(VoucherCreation.createvoucherbtn, getproperty("Tri2"), getproperty("Age19"),
@@ -25,7 +25,7 @@ public class RedeemingAndDecliningTestCases extends BaseClass {
 	/**
 	 * Verifying the declining flow
 	 */
-	@Test(priority = 2, enabled = true)
+	@Test
 	public void decliningVoucherTC17() {
 		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.creatingVoucher(VoucherCreation.createvoucherbtn, getproperty("Tri4"), getproperty("Age31"),
