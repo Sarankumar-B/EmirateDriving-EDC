@@ -116,6 +116,7 @@ public class BaseClass extends Driver {
 	 * verifying the given URL
 	 */
 	public void verifystringURL(String url) {
+		sleeptime3sec();
 		String currenturl = driver.getCurrentUrl();
 		assertEquals(url, currenturl);
 		ExtentLogger.pass("Current URL: " + currenturl + " is same as the given URL");

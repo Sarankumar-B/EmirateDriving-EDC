@@ -50,4 +50,6 @@ public class LogInTestCases extends BaseClass {
 		LogIn.loginFlow(user, pass);
 		elementpresence(LogIn.invalidcredentialserrormsg);
 	}
+	
+	
 }

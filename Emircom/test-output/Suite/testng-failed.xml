@@ -5,15 +5,15 @@
     <listener class-name="com.listeners.ListernerClass"/>
     <listener class-name="com.listeners.AnnotationsTransformer"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="MyTestCase(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="com.testcases.VoucherCreationAndCancelTestCases">
+      <class name="com.testcases.LogInTestCases">
         <methods>
-          <include name="cancellingVoucherTC15"/>
+          <include name="pageLandingOnHomepageAndUrlVerificationTC01"/>
           <include name="invokeApp"/>
         </methods>
-      </class> <!-- com.testcases.VoucherCreationAndCancelTestCases -->
+      </class> <!-- com.testcases.LogInTestCases -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- MyTestCase(failed) -->
 </suite> <!-- Failed suite [Suite] -->

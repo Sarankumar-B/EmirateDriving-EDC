@@ -247,7 +247,7 @@ public class VoucherList extends BaseClass {
 
 	public static void iteratingDropDdown() {
 		VoucherList.filterbtn.click();
-		Select vehicleType = new Select(vehicledropdown);
+		Select vehicleType = new Select(vehicledropdown); 
 		List<WebElement> option1 = vehicleType.getOptions();
 		for (int i = 1; i < option1.size(); i++) {
 			vehicleType.selectByIndex(i);
