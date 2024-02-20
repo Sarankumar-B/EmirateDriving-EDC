@@ -1,15 +1,18 @@
 package com.testcases;
 
 import org.testng.annotations.Test;
+
+import com.drivermanager.DriverManager;
 import com.pageobjectmodel.LogIn;
 import com.pageobjectmodel.VoucherCreation;
 
 public class LogInTestCases extends BaseClass {
 
-	
+	LogIn li = new LogIn(DriverManager.getDriver());
+
 	@Test
 	/**
-	 * Verifying whether the entered url is landing in home page 
+	 * Verifying whether the entered url is landing in home page
 	 */
 	public void pageLandingOnHomepageAndUrlVerificationTC01() {
 		browserDetails();
@@ -21,7 +24,8 @@ public class LogInTestCases extends BaseClass {
 	 * Verifying the core elements are present in the login Page
 	 */
 	public void verifyingLogInPageElementsTC02() {
-		LogIn.verifyingcoreelementspresence();
+
+		li.verifyingcoreelementspresence();
 	}
 
 	/**
@@ -29,7 +33,7 @@ public class LogInTestCases extends BaseClass {
 	 */
 	@Test
 	public void verifyingLoginPageErrorMsgTC03() {
-		LogIn.logInPageErrosMsgsValidations(getproperty("ValidUsr"));
+		li.logInPageErrosMsgsValidations(getproperty("ValidUsr"));
 	}
 
 	/**
@@ -37,7 +41,7 @@ public class LogInTestCases extends BaseClass {
 	 */
 	@Test
 	public void verifyingLoginwithvalidcredentialsTC04() {
-		LogIn.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
+		li.loginFlow(getproperty("ValidUsr"), getproperty("ValidPwd"));
 		VoucherCreation.loggedInUserverify(props.getProperty("ValidUsr"));
 
 	}
@@ -47,9 +51,8 @@ public class LogInTestCases extends BaseClass {
 	 */
 	@Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
 	public void verifyingInvalidCredentialerrormsgTC05(String user, String pass) {
-		LogIn.loginFlow(user, pass);
-		elementpresence(LogIn.invalidcredentialserrormsg);
+		li.loginFlow(user, pass);
+		elementpresence(li.invalidcredentialserrormsg);
 	}
-	
-	
+
 }

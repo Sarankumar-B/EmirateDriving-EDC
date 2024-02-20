@@ -49,26 +49,30 @@ public class Driver {
 			options.setExperimentalOption("prefs", chromePrefs);
 			options.setAcceptInsecureCerts(true);
 			driver = new ChromeDriver(options);
-			Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+			DriverManager.setDriver(driver);
+			Capabilities caps = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
 			browserName = caps.getBrowserName();
 			browserVersion = caps.getBrowserVersion();
 
 		} else if (browsername.equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
-			Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+			DriverManager.setDriver(driver);
+			Capabilities caps = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
 			browserName = caps.getBrowserName();
 			browserVersion = caps.getBrowserVersion();
 
 		} else if (browsername.equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
-			Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+			DriverManager.setDriver(driver);
+			Capabilities caps = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
 			browserName = caps.getBrowserName();
 			browserVersion = caps.getBrowserVersion();
 		}
-		FrameworkConstants.pageFactoryInitiation();
-		driver.manage().window().maximize();
-		driver.get(props.getProperty("URL"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		FrameworkConstants.pageFactoryInitiation();
+		System.out.println("Before Test Thread ID: "+Thread.currentThread().getId());
+//		DriverManager.getDriver().manage().window().maximize();
+		DriverManager.getDriver().get(props.getProperty("Xpheno"));
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	@AfterMethod
@@ -77,7 +81,9 @@ public class Driver {
 	 * 
 	 */
 	public void closebrowser() {
-		driver.quit();
+		System.out.println("After Test Thread ID: "+Thread.currentThread().getId());
+		DriverManager.getDriver().quit();
+		DriverManager.unLoad();
 	}
 
 }

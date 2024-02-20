@@ -1,5 +1,6 @@
 package com.pageobjectmodel;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,36 +8,38 @@ import com.testcases.BaseClass;
 
 public class LogIn extends BaseClass {
 
-	public static void pagefactoyinit() {
-		PageFactory.initElements(driver, LogIn.class);
+	public LogIn(WebDriver driver) {
+		PageFactory.initElements(driver,this);
 	}
 
 	@FindBy(xpath = "//button[contains(text(),'Login')]")
-	public static WebElement loginbtn;
+	public  WebElement loginbtn;
 
 	@FindBy(xpath = "//input[@placeholder='Enter your username here']")
-	public static WebElement usernameplaceholder;
+	public  WebElement usernameplaceholder;
 
 	@FindBy(xpath = "//input[@placeholder='Enter your password here']")
-	public static WebElement passwordplaceholder;
+	public  WebElement passwordplaceholder;
 
 	@FindBy(xpath = "//div[@class='login-voucher']")
-	public static WebElement voucherimg;
+	public  WebElement voucherimg;
 
 	@FindBy(xpath = "//div[@class='row justify-content-end align-items-center']")
-	public static WebElement languageimg;
+	public  WebElement languageimg;
 
 	@FindBy(xpath = "//label[text()='Please enter username']")
-	public static WebElement usernameerrormsg;
+	public  WebElement usernameerrormsg;
 
 	@FindBy(xpath = "//label[text()='Please enter Password']")
-	public static WebElement pwderrormsg;
+	public  WebElement pwderrormsg;
 
 	@FindBy(xpath = "//label[@class='server_error_label']")
-	public static WebElement invalidcredentialserrormsg;
+	public  WebElement invalidcredentialserrormsg;
 
 	@FindBy(xpath = "//a[text()='Forget Password?']")
-	public static WebElement forgetpwd;
+	public  WebElement forgetpwd;
+	
+	
 
 	/**
 	 * Enter emailId, password and clicking on logIn button
@@ -44,7 +47,7 @@ public class LogIn extends BaseClass {
 	 * @param username Enter user name here
 	 * @param pass     Enter password here
 	 */
-	public static void loginFlow(String username, String pass) {
+	public  void loginFlow(String username, String pass) {
 		sendKeys(usernameplaceholder, username);
 		sendKeys(passwordplaceholder, pass);
 		clickElement(loginbtn);
@@ -55,7 +58,7 @@ public class LogIn extends BaseClass {
 	 * Verifying the elements are present in the landing page or not
 	 * 
 	 */
-	public static void verifyingcoreelementspresence() {
+	public  void verifyingcoreelementspresence() {
 		elementpresence(usernameplaceholder);
 		elementpresence(passwordplaceholder);
 		elementpresence(voucherimg);
@@ -63,12 +66,12 @@ public class LogIn extends BaseClass {
 		elementpresence(loginbtn);
 	}
 
-
 	/**
 	 * Validating the error messages of the login flow
+	 * 
 	 * @param validUser Enter a valid user name here
 	 */
-	public static void logInPageErrosMsgsValidations(String validUser) {
+	public  void logInPageErrosMsgsValidations(String validUser) {
 		clickElement(loginbtn);
 		elementpresence(usernameerrormsg);
 		sendKeys(usernameplaceholder, validUser);

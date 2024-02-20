@@ -5,15 +5,20 @@
     <listener class-name="com.listeners.ListernerClass"/>
     <listener class-name="com.listeners.AnnotationsTransformer"/>
   </listeners>
-  <test thread-count="5" name="MyTestCase(failed)">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
       <class name="com.testcases.LogInTestCases">
         <methods>
+          <include name="closebrowser"/>
+          <include name="verifyingLoginPageErrorMsgTC03"/>
+          <include name="verifyingLogInPageElementsTC02"/>
           <include name="pageLandingOnHomepageAndUrlVerificationTC01"/>
+          <include name="verifyingLoginwithvalidcredentialsTC04"/>
+          <include name="verifyingInvalidCredentialerrormsgTC05" invocation-numbers="0"/>
           <include name="invokeApp"/>
         </methods>
       </class> <!-- com.testcases.LogInTestCases -->
     </classes>
-  </test> <!-- MyTestCase(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

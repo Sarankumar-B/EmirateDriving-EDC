@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-25T17:16:53 IST" name="Suite" finished-at="2024-01-25T17:18:22 IST" duration-ms="88451">
+  <suite started-at="2024-02-20T12:20:07 IST" name="E-commerce portal automation" finished-at="2024-02-20T12:20:51 IST" duration-ms="43478">
     <groups>
     </groups>
-    <test started-at="2024-01-25T17:16:53 IST" name="MyTestCase" finished-at="2024-01-25T17:18:22 IST" duration-ms="88451">
-      <class name="com.testcases.LogInTestCases">
-        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:16:53 IST" name="invokeApp" finished-at="2024-01-25T17:17:23 IST" duration-ms="29552" status="PASS">
+    <test started-at="2024-02-20T12:20:07 IST" name="Test4" finished-at="2024-02-20T12:20:45 IST" duration-ms="37252">
+      <class name="xpheno.XphenoSearch">
+        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:xpheno.XphenoSearch@58be6e8]" started-at="2024-02-20T12:20:08 IST" name="invokeApp" finished-at="2024-02-20T12:20:18 IST" duration-ms="10349" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
-        <test-method signature="pageLandingOnHomepageAndUrlVerificationTC01()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:23 IST" name="pageLandingOnHomepageAndUrlVerificationTC01" finished-at="2024-01-25T17:17:29 IST" duration-ms="6098" status="PASS">
+        <test-method signature="xphenoSearch()[pri:0, instance:xpheno.XphenoSearch@58be6e8]" started-at="2024-02-20T12:20:18 IST" name="xphenoSearch" finished-at="2024-02-20T12:20:41 IST" duration-ms="22966" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pageLandingOnHomepageAndUrlVerificationTC01 -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:32 IST" name="closebrowser" finished-at="2024-01-25T17:17:33 IST" duration-ms="348" status="PASS">
+        </test-method> <!-- xphenoSearch -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:xpheno.XphenoSearch@58be6e8]" started-at="2024-02-20T12:20:44 IST" name="closebrowser" finished-at="2024-02-20T12:20:45 IST" duration-ms="389" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:33 IST" name="invokeApp" finished-at="2024-01-25T17:17:35 IST" duration-ms="2548" status="PASS">
+      </class> <!-- xpheno.XphenoSearch -->
+    </test> <!-- Test4 -->
+    <test started-at="2024-02-20T12:20:07 IST" name="Test2" finished-at="2024-02-20T12:20:47 IST" duration-ms="39275">
+      <class name="xpheno.XphenoSearch">
+        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:xpheno.XphenoSearch@545b995e]" started-at="2024-02-20T12:20:08 IST" name="invokeApp" finished-at="2024-02-20T12:20:19 IST" duration-ms="11523" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,15 +41,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
-        <test-method signature="verifyingLogInPageElementsTC02()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:35 IST" name="verifyingLogInPageElementsTC02" finished-at="2024-01-25T17:17:36 IST" duration-ms="327" status="PASS">
+        <test-method signature="xphenoSearch()[pri:0, instance:xpheno.XphenoSearch@545b995e]" started-at="2024-02-20T12:20:19 IST" name="xphenoSearch" finished-at="2024-02-20T12:20:43 IST" duration-ms="24172" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingLogInPageElementsTC02 -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:39 IST" name="closebrowser" finished-at="2024-01-25T17:17:40 IST" duration-ms="1142" status="PASS">
+        </test-method> <!-- xphenoSearch -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:xpheno.XphenoSearch@545b995e]" started-at="2024-02-20T12:20:46 IST" name="closebrowser" finished-at="2024-02-20T12:20:47 IST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:40 IST" name="invokeApp" finished-at="2024-01-25T17:17:43 IST" duration-ms="2663" status="PASS">
+      </class> <!-- xpheno.XphenoSearch -->
+    </test> <!-- Test2 -->
+    <test started-at="2024-02-20T12:20:07 IST" name="Test5" finished-at="2024-02-20T12:20:47 IST" duration-ms="39908">
+      <class name="xpheno.XphenoSearch">
+        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:xpheno.XphenoSearch@2bd08376]" started-at="2024-02-20T12:20:08 IST" name="invokeApp" finished-at="2024-02-20T12:20:18 IST" duration-ms="10518" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,15 +64,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
-        <test-method signature="verifyingLoginPageErrorMsgTC03()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:43 IST" name="verifyingLoginPageErrorMsgTC03" finished-at="2024-01-25T17:17:43 IST" duration-ms="660" status="PASS">
+        <test-method signature="xphenoSearch()[pri:0, instance:xpheno.XphenoSearch@2bd08376]" started-at="2024-02-20T12:20:18 IST" name="xphenoSearch" finished-at="2024-02-20T12:20:44 IST" duration-ms="25634" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingLoginPageErrorMsgTC03 -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:47 IST" name="closebrowser" finished-at="2024-01-25T17:17:47 IST" duration-ms="346" status="PASS">
+        </test-method> <!-- xphenoSearch -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:xpheno.XphenoSearch@2bd08376]" started-at="2024-02-20T12:20:47 IST" name="closebrowser" finished-at="2024-02-20T12:20:47 IST" duration-ms="353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:47 IST" name="invokeApp" finished-at="2024-01-25T17:17:50 IST" duration-ms="3390" status="PASS">
+      </class> <!-- xpheno.XphenoSearch -->
+    </test> <!-- Test5 -->
+    <test started-at="2024-02-20T12:20:07 IST" name="Test1" finished-at="2024-02-20T12:20:51 IST" duration-ms="43183">
+      <class name="xpheno.XphenoSearch">
+        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:xpheno.XphenoSearch@338c99c8]" started-at="2024-02-20T12:20:08 IST" name="invokeApp" finished-at="2024-02-20T12:20:19 IST" duration-ms="11217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,15 +87,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
-        <test-method signature="verifyingLoginwithvalidcredentialsTC04()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:17:50 IST" name="verifyingLoginwithvalidcredentialsTC04" finished-at="2024-01-25T17:18:09 IST" duration-ms="18557" status="PASS">
+        <test-method signature="xphenoSearch()[pri:0, instance:xpheno.XphenoSearch@338c99c8]" started-at="2024-02-20T12:20:19 IST" name="xphenoSearch" finished-at="2024-02-20T12:20:47 IST" duration-ms="28421" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingLoginwithvalidcredentialsTC04 -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:18:12 IST" name="closebrowser" finished-at="2024-01-25T17:18:12 IST" duration-ms="293" status="PASS">
+        </test-method> <!-- xphenoSearch -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:xpheno.XphenoSearch@338c99c8]" started-at="2024-02-20T12:20:50 IST" name="closebrowser" finished-at="2024-02-20T12:20:51 IST" duration-ms="313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:18:13 IST" name="invokeApp" finished-at="2024-01-25T17:18:16 IST" duration-ms="2751" status="PASS">
+      </class> <!-- xpheno.XphenoSearch -->
+    </test> <!-- Test1 -->
+    <test started-at="2024-02-20T12:20:07 IST" name="Test3" finished-at="2024-02-20T12:20:51 IST" duration-ms="43478">
+      <class name="xpheno.XphenoSearch">
+        <test-method is-config="true" signature="invokeApp(java.lang.String)[pri:0, instance:xpheno.XphenoSearch@29526c05]" started-at="2024-02-20T12:20:08 IST" name="invokeApp" finished-at="2024-02-20T12:20:19 IST" duration-ms="11895" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,27 +110,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeApp -->
-        <test-method signature="verifyingInvalidCredentialerrormsgTC05(java.lang.String,java.lang.String)[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:18:16 IST" name="verifyingInvalidCredentialerrormsgTC05" data-provider="loginData" finished-at="2024-01-25T17:18:18 IST" duration-ms="1835" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[newwcsss]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Qatest@12323]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="xphenoSearch()[pri:0, instance:xpheno.XphenoSearch@29526c05]" started-at="2024-02-20T12:20:19 IST" name="xphenoSearch" finished-at="2024-02-20T12:20:47 IST" duration-ms="28011" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyingInvalidCredentialerrormsgTC05 -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:com.testcases.LogInTestCases@8576fa0]" started-at="2024-01-25T17:18:21 IST" name="closebrowser" finished-at="2024-01-25T17:18:22 IST" duration-ms="347" status="PASS">
+        </test-method> <!-- xphenoSearch -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:xpheno.XphenoSearch@29526c05]" started-at="2024-02-20T12:20:51 IST" name="closebrowser" finished-at="2024-02-20T12:20:51 IST" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
-      </class> <!-- com.testcases.LogInTestCases -->
-    </test> <!-- MyTestCase -->
-  </suite> <!-- Suite -->
+      </class> <!-- xpheno.XphenoSearch -->
+    </test> <!-- Test3 -->
+  </suite> <!-- E-commerce portal automation -->
 </testng-results>

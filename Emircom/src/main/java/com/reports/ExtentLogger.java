@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.drivermanager.DriverManager;
 import com.testcases.BaseClass;
 
 public  class ExtentLogger extends BaseClass {
@@ -103,6 +104,6 @@ public  class ExtentLogger extends BaseClass {
 	 */
 	public static String getBase64Image() {
 		sleeptime3sec();
-		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+		return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 	}
 }

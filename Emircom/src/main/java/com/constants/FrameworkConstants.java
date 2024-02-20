@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
+import com.drivermanager.DriverManager;
 import com.pageobjectmodel.Forgetpwd;
 import com.pageobjectmodel.LogIn;
 import com.pageobjectmodel.Profile;
@@ -70,7 +71,6 @@ public class FrameworkConstants extends BaseClass {
 	 * 
 	 */
 	public static void pageFactoryInitiation() {
-		LogIn.pagefactoyinit();
 		VoucherCreation.pagefactoryinit();
 		Forgetpwd.pagefactoyinit();
 		ResetPwd.pagefactoyinit();

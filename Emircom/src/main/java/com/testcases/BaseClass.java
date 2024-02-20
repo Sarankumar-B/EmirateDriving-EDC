@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -32,8 +33,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.drivermanager.Driver;
+import com.drivermanager.DriverManager;
 import com.reports.ExtentLogger;
 import com.reports.ExtentReport;
+
+import xpheno.data;
 
 public class BaseClass extends Driver {
 
@@ -52,7 +56,7 @@ public class BaseClass extends Driver {
 	 * @param element
 	 * @throws InterruptedException
 	 */
-	public static void sendKeys(WebElement element, String value) {
+	public  void sendKeys(WebElement element, String value) {
 		element.sendKeys(value);
 		try {
 			String attribute = element.getAttribute("value");
@@ -70,7 +74,7 @@ public class BaseClass extends Driver {
 	 * @param element
 	 * @throws InterruptedException
 	 */
-	public static void clickElement(WebElement element) {
+	public  void clickElement(WebElement element) {
 		waitForElementToBeClickable(Duration.ofSeconds(10), element);
 		element.click();
 		try {
@@ -83,8 +87,8 @@ public class BaseClass extends Driver {
 	}
 
 	public static void clickbyjavascript(WebElement element) {
-		waitForElementToBeClickable(Duration.ofSeconds(10), element);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		waitForElementToBeClickable(Duration.ofSeconds(20), element);
+		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
 		js.executeScript("arguments[0].click();", element);
 		try {
 			String text = element.getText();
@@ -117,7 +121,7 @@ public class BaseClass extends Driver {
 	 */
 	public void verifystringURL(String url) {
 		sleeptime3sec();
-		String currenturl = driver.getCurrentUrl();
+		String currenturl = DriverManager.getDriver().getCurrentUrl();
 		assertEquals(url, currenturl);
 		ExtentLogger.pass("Current URL: " + currenturl + " is same as the given URL");
 	}
@@ -484,6 +488,32 @@ public class BaseClass extends Driver {
 		return pass;
 
 	}
+	
+	public void enterByXpath(String xpathValue, String data) {
+		// TODO Auto-generated method stub
+		try {
+			WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(30));
+			WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathValue)));
+			 element.sendKeys(data);
+			//driver.findElementByXPath(xpathValue).sendKeys(data);
+			System.out.println("The element of xpath "+xpathValue+" entered with data "+data);
+
+		}catch (NoSuchElementException e) {
+			// TODO: handle exception
+			System.err.println("The element of xpath "+xpathValue+" is not available in the DOM ");
+		} 
+		catch (ElementNotInteractableException e) {
+			// TODO: handle exception
+			System.err.println("The element of xpath "+xpathValue+" is not interactable in the application");
+		}catch (StaleElementReferenceException e) {
+			// TODO Auto-generated catch block
+			System.err.println("The element of xpath "+xpathValue+" is modified ");
+		}
+		
+		finally {
+			//takeSnap();
+		}
+	}
 
 	public static void screenshot(String filepath) throws IOException {
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);
@@ -491,6 +521,145 @@ public class BaseClass extends Driver {
 		File destFile = new File(filepath);
 		FileUtils.copyFile(srcFile, destFile);
 
+	}
+	
+	public String randomname(String xpath, String field) {
+		
+		
+		//List<String> usnamelist = new ArrayList<String>();
+		
+		data listofdata = new data();
+		if(field=="name") {
+			
+		
+	    int sizeofusnamelist =	listofdata.Usnamelist.length;
+	    int randomclientrefrence = (int)(Math.random() * sizeofusnamelist-1);
+	    
+	    
+	    String selectedname = listofdata.Usnamelist[randomclientrefrence];
+	    enterByXpath(xpath, selectedname);
+	    
+	    
+		}else if(field=="jobtitle") {
+			
+			 int sizeofjobtitlelist =	listofdata.jobtitlelist.length;
+			    int randomjobtitle = (int)(Math.random() * sizeofjobtitlelist-1);
+			    
+			    
+			    String selectedtitle = listofdata.jobtitlelist[randomjobtitle];
+			    enterByXpath(xpath, selectedtitle);
+			
+			
+		}else if(field=="qualification") {
+			
+			 int sizeofqualificationlist =	listofdata.qualification.length;
+			    int randomqualification = (int)(Math.random() * sizeofqualificationlist-1);
+			    
+			    
+			    String selectedtitle = listofdata.qualification[randomqualification];
+			    enterByXpath(xpath, selectedtitle);
+			
+		}else if (field=="primaryskill"){
+			
+			 int sizeofprimaryskillist =	listofdata.primaryskill.length;
+			    int randomprimaryskill = (int)(Math.random() * sizeofprimaryskillist-1);
+			    
+			    
+			    String selectedprimaryskill = listofdata.primaryskill[randomprimaryskill];
+			    enterByXpath(xpath, selectedprimaryskill);
+			
+			
+			
+			
+		}else if(field=="jobdes"){
+			
+			 int sizeofjobdeslist =	listofdata.jobdeslist.length;
+			    int randomjobdes = (int)(Math.random() * sizeofjobdeslist-1);
+			    
+			    
+			    String selectedjobdes = listofdata.jobdeslist[randomjobdes];
+			    enterByXpath(xpath, selectedjobdes);
+		
+			
+			}else if (field=="Remark"){
+				
+				int sizeofremarklist =	listofdata.remarklist.length;
+			    int randomremark = (int)(Math.random() * sizeofremarklist-1);
+			    
+			    
+			    String selectedremark = listofdata.remarklist[randomremark];
+			    enterByXpath(xpath, selectedremark);
+			
+			
+			}else if(field=="mail"){
+				
+				int sizeofmaillist =	listofdata.maillist.length;
+			    int randommailnumber = (int)(Math.random() * sizeofmaillist-1);
+			    
+			    
+			    String selectedmail = listofdata.maillist[randommailnumber];
+			    enterByXpath(xpath, selectedmail);
+				
+				
+			}else if(field=="keyword") {
+				
+				int sizeofkeywordlist = listofdata.keyword.length;
+				int randomkeywordnumber = (int)(Math.random()*sizeofkeywordlist-1);
+				
+				String selectedkeyword = listofdata.keyword[randomkeywordnumber];
+				enterByXpath(xpath, selectedkeyword);
+				
+				
+			}else {
+				
+				System.out.println("data not present");
+		}
+	    
+	   // System.out.println(selectedname);	
+	   // System.out.println(sizeofusnamelist);
+
+		
+		
+		
+		
+		return xpath;
+		
+		
+	}
+	
+	public String RandomDropDown(String xpath, String count) {
+		
+		
+		
+		 WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(65));
+		 List<WebElement> clientnamelist = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpath)));
+		
+		
+		
+		
+		//List<WebElement> li = driver.findElements(By.xpath(xpath));
+		for(WebElement input : clientnamelist)
+		//int count1 = Integer.parseInt(count);
+	    System.out.println(input.getText());
+		//int i = 5;
+		//while(count1>0) {
+			
+		//int randomIndex = (int) (Math.random() * li.size());
+		//if(!li.get(randomIndex).isSelected()) {
+			//li.get(randomIndex).click();
+			//String checkboxname =li.get(randomIndex).getText();
+			//System.out.println(checkboxname);
+			
+			
+			
+			//--count1;
+//		}
+		//}
+		
+		return xpath;
+		
+		
+		
 	}
 
 }

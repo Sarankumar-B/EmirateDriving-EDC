@@ -7,7 +7,8 @@
 		<listener class-name="com.listeners.AnnotationsTransformer"></listener>
 	</listeners>
 
-	<test name="MyTestCase">
+	<test  thread-count="5" name="Test" parallel="methods">
+	
 		<parameter name="browsername" value="chrome"></parameter>
 		<classes>
 			<class name="com.testcases.LogInTestCases">
@@ -19,6 +20,8 @@
 					<include name="verifyingInvalidCredentialerrormsgTC05" />
 				</methods>
 			</class>
+		</classes>
+		</test>
 <!--			<class name="com.testcases.ForgotPasswordTestCases">-->
 <!--					<methods>-->
 <!--					<include name="verifyingForgetPwdPageNavigationTC06" />-->
@@ -70,7 +73,6 @@
 <!--					<include name="verifyingExportingCsvTC28" />-->
 <!--				</methods>-->
 <!--			</class>-->
-		</classes>
-	</test>
+		
 </suite>
 	
